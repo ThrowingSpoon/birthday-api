@@ -1,0 +1,26 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "Birthday API",
+    "main": "src/server.js",
+    "type": "module",
+    "scripts": {
+        "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+        "start": "node src/server.js",
+        "dev": "nodemon --ignore '*.json' src/server.js "
+    },
+    "author": "Liam Martin",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.2",
+        "express": "^4.17.3",
+        "luxon": "^2.3.1",
+        "nodemailer": "^6.7.3",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "jest": "^27.5.1",
+        "nodemon": "^2.0.15",
+        "supertest": "^6.2.2"
+    }
+}

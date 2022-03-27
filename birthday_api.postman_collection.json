@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "a302d1a5-046f-481a-8caa-cb7d004ad671",
+		"name": "birthday-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "people",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_server}}/people",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "people/birthdays/today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_server}}/people/birthdays/today",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"people",
+						"birthdays",
+						"today"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "people/birthdays/:date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_server}}/people/birthdays/:date",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"people",
+						"birthdays",
+						":date"
+					],
+					"variable": [
+						{
+							"key": "date",
+							"value": "2022-03-27"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local_server}}/person/:id",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"person",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1231cc6b-4078-4ee7-9fd5-71a81f594d7f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Bob\",\n    \"last_name\": \"Lumbridge\",\n    \"date_of_birth\": \"2021-10-25\",\n    \"email_address\": \"test123@hotmail.co.uk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_server}}/person",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "person/:id",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "person/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"egagaegaege\",\n    \"last_name\": \"Lumbridge\",\n    \"email_address\": \"liamstest123@hotmail.co.uk\",\n    \"date_of_birth\": \"2021-10-25\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_server}}/person/:id",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"person",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "0c0f7eb3-6bb0-42f9-9c0c-1c6c0f9fb0cd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"liamstest123@gmail.com\",\n    \"subject\": \"Birthday!\",\n    \"body\": \"Happy Birthday, Hope you have a lovely day\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_server}}/sendMessage",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"sendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendBirthdays",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"liamstest123@gmail.com\",\n    \"subject\": \"Birthday!\",\n    \"body\": \"Happy Birthday, Hope you have a lovely day\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local_server}}/sendBirthdays",
+					"host": [
+						"{{local_server}}"
+					],
+					"path": [
+						"sendBirthdays"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
